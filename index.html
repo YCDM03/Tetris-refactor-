@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    </style>
+  </head>
+  <body>
+    <div class="gamescreen">
+      <div class="nav">
+        score:
+        <div class="score">0</div>
+      </div>
+      <div class="main">
+        <div class="manuel">
+          <div id="Imino">
+            <div class="Imodel" id="I1">1</div>
+            <div class="Imodel" id="I2">2</div>
+            <div class="Imodel" id="I3">3</div>
+            <div class="Imodel" id="I4">4</div>
+            <div class="Imodel" id="I5">5</div>
+            <div class="Imodel" id="I6">6</div>
+            <div class="Imodel" id="I7">7</div>
+            <div class="Imodel" id="I8">8</div>
+            <div class="Imodel" id="I9">9</div>
+            <div class="Imodel" id="I10">10</div>
+            <div class="Imodel" id="I11">11</div>
+            <div class="Imodel" id="I12">12</div>
+          </div>
+          <div class="Omino">
+            <div class="Omodel" id="O1">1</div>
+            <div class="Omodel" id="O2">2</div>
+            <div class="Omodel" id="O3">3</div>
+            <div class="Omodel" id="O4">4</div>
+            <div class="Omodel" id="O5">5</div>
+            <div class="Omodel" id="O6">6</div>
+            <div class="Omodel" id="O7">7</div>
+            <div class="Omodel" id="O8">8</div>
+            <div class="Omodel" id="O9">9</div>
+          </div>
+          <div class="Zmino">
+            <div class="Zmodel" id="Z1">1</div>
+            <div class="Zmodel" id="Z2">2</div>
+            <div class="Zmodel" id="Z3">3</div>
+            <div class="Zmodel" id="Z4">4</div>
+            <div class="Zmodel" id="Z5">5</div>
+            <div class="Zmodel" id="Z6">6</div>
+            <div class="Zmodel" id="Z7">7</div>
+            <div class="Zmodel" id="Z8">8</div>
+            <div class="Zmodel" id="Z9">9</div>
+          </div>
+          <div class="Smino">
+            <div class="Smodel" id="S1">1</div>
+            <div class="Smodel" id="S2">2</div>
+            <div class="Smodel" id="S3">3</div>
+            <div class="Smodel" id="S4">4</div>
+            <div class="Smodel" id="S5">5</div>
+            <div class="Smodel" id="S6">6</div>
+            <div class="Smodel" id="S7">7</div>
+            <div class="Smodel" id="S8">8</div>
+            <div class="Smodel" id="S9">9</div>
+          </div>
+          <div class="Jmino">
+            <div class="Jmodel" id="J1">1</div>
+            <div class="Jmodel" id="J2">2</div>
+            <div class="Jmodel" id="J3">3</div>
+            <div class="Jmodel" id="J4">4</div>
+            <div class="Jmodel" id="J5">5</div>
+            <div class="Jmodel" id="J6">6</div>
+            <div class="Jmodel" id="J7">7</div>
+            <div class="Jmodel" id="J8">8</div>
+            <div class="Jmodel" id="J9">9</div>
+          </div>
+          <div class="Lmino">
+            <div class="Lmodel" id="L1">1</div>
+            <div class="Lmodel" id="L2">2</div>
+            <div class="Lmodel" id="L3">3</div>
+            <div class="Lmodel" id="L4">4</div>
+            <div class="Lmodel" id="L5">5</div>
+            <div class="Lmodel" id="L6">6</div>
+            <div class="Lmodel" id="L7">7</div>
+            <div class="Lmodel" id="L8">8</div>
+            <div class="Lmodel" id="L9">9</div>
+          </div>
+          <div class="Tmino">
+            <div class="Tmodel" id="T1">1</div>
+            <div class="Tmodel" id="T2">2</div>
+            <div class="Tmodel" id="T3">3</div>
+            <div class="Tmodel" id="T4">4</div>
+            <div class="Tmodel" id="T5">5</div>
+            <div class="Tmodel" id="T6">6</div>
+            <div class="Tmodel" id="T7">7</div>
+            <div class="Tmodel" id="T8">8</div>
+            <div class="Tmodel" id="T9">9</div>
+          </div>
+        </div>
+        <div class="maingame">
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+          <div class="yblock"></div>
+        </div>
+        <div class="interface">
+          <div class="randombox"></div>
+          <span class="startbutton" data-text="START!"></span>
+          
+        </div>
+      </div>
+
+      <div class="footer">
+        <!-- <button class="buttont">tset</button> -->
+      </div>
+    </div>
+  </body>
+
+
+  <script>
+    let main = document.querySelector(".maingame");
+   
+
+let score=document.querySelector(".score");
+let combo=0;
+let linecount=0;
+let delay=1000;
+let createdelay=300;
+let scoredefault=100;
+let stage=1;
+
+    // Imino=0, Omino=1, Zmino=2, Smino=3, Lmino=4, Jmino=5, Tmino=6
+    let createBlock = () => {setTimeout(()=>{
+      if(document.querySelectorAll(".yblock")[0].childNodes[4].classList.contains("fixed")||document.querySelectorAll(".yblock")[1].childNodes[4].classList.contains("fixed"))
+      {return Gameover()}
+      if(stage==1){if(Number(score.innerHTML)>=100){stage+=1
+         delay-=500}}
+      let random_number = Math.floor(Math.random() * 7);
+      switch (random_number) {
+        case 0:
+          createImino();linecount=0;
+          break;
+        case 1:
+          createOmino();linecount=0;
+          break;
+        case 2:
+          createZmino();linecount=0;
+          break;
+        case 3:
+          createSmino();linecount=0;
+          break;
+        case 4:
+          createLmino();linecount=0;
+          break;
+        case 5:
+          createJmino();linecount=0;
+          break;
+        case 6:
+          createTmino();linecount=0;
+          break;
+      }},createdelay)
+      
+    };
+  
+    function deletestartB(){
+      document.querySelector(".startbutton").remove()
+    }
+    
+    document.querySelector(".startbutton").addEventListener("click",createBlock);
+    document.querySelector(".startbutton").addEventListener("click",deletestartB);
+    
+    
+    let blockdown=setInterval(Blockdown, delay);
+    
+    
+    function Blockdown(){ if(document.querySelectorAll(".moving").length=="0"){return}
+      else if(document.querySelector(".moving").classList.contains("Imino")){Idown()}
+      else if(document.querySelector(".moving").classList.contains("IminoR")){IdownR()}
+      else if(document.querySelector(".moving").classList.contains("Omino")){Odown()}
+      else if(document.querySelector(".moving").classList.contains("Smino")){Sdown()}
+      else if(document.querySelector(".moving").classList.contains("SminoR")){SdownR()}
+      else if(document.querySelector(".moving").classList.contains("Zmino")){Zdown()}
+      else if(document.querySelector(".moving").classList.contains("ZminoR")){ZdownR()}
+      else if(document.querySelector(".moving").classList.contains("Jmino1")){Jdown()}
+      else if(document.querySelector(".moving").classList.contains("Jmino2")){Jdown90()}
+      else if(document.querySelector(".moving").classList.contains("Jmino3")){Jdown180()}
+      else if(document.querySelector(".moving").classList.contains("Jmino4")){Jdown270()}
+      else if(document.querySelector(".moving").classList.contains("Lmino1")){Ldown()}
+      else if(document.querySelector(".moving").classList.contains("Lmino2")){Ldown90()}
+      else if(document.querySelector(".moving").classList.contains("Lmino3")){Ldown180()}
+      else if(document.querySelector(".moving").classList.contains("Lmino4")){Ldown270()}
+      else if(document.querySelector(".moving").classList.contains("Tmino1")){Tdown()}
+      else if(document.querySelector(".moving").classList.contains("Tmino2")){Tdown90()}
+      else if(document.querySelector(".moving").classList.contains("Tmino3")){Tdown180()}
+      else if(document.querySelector(".moving").classList.contains("Tmino4")){Tdown270()}}
+
+  
+for(i=0;i<20;i++){
+for(o=0;o<10;o++){
+  let cb=document.createElement("div")
+  cb.className="block"
+  main.children[i].appendChild(cb)
+}}
+
+let moving={
+  x:0,
+  y:0
+}
+
+
+function clearLine(){
+  let yblock=document.querySelectorAll(".yblock");
+  yblock.forEach((item) => {
+  let line=0;
+  item.querySelectorAll("div").forEach((e)=>{if(e.classList.contains("fixed")){line+=1}})
+  if(line==10){item.remove();
+  let ydiv=document.createElement("div");
+  ydiv.className="yblock";
+  for(i=0;i<10;i++){
+    let xdiv=document.createElement("div");
+    xdiv.className="block";
+    ydiv.appendChild(xdiv);
+  };
+  score.innerHTML=Number(score.innerHTML)+scoredefault+scoredefault*linecount;
+  linecount++
+  main.insertBefore(ydiv,main.firstElementChild);}
+});
+}
+
+function Gameover(){
+  score.innerHTML=0;
+  alert("Gameover!")
+  location.reload()
+};
+
+let test="test입니다"
+
+  </script>
+    <script src="./js/block/Imino.js"></script>
+    <script src="./js/block/Omino.js"></script>
+    <script src="./js/block/Zmino.js"></script>
+    <script src="./js/block/Smino.js"></script>
+    <script src="./js/block/Lmino.js"></script>
+    <script src="./js/block/Jmino.js"></script>
+    <script src="./js/block/Tmino.js"></script>
+    
+</html>

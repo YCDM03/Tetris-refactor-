@@ -1,0 +1,228 @@
+
+:root{
+    --color-block-model:rgba(0,0,0,0.7);
+    --color-block-red:rgba(255, 0, 0, 0.8);
+    --color-block-blue:rgba(0, 162, 255, 1);
+    --color-block-yellow:rgba(255, 230, 9, 0.9);
+    --color-block-green:rgb(15, 201, 24);
+    --color-block-orange:rgb(252, 101, 0);
+    --color-block-purple:rgb(252, 25, 195);
+    --color-block-violet:rgb(130, 0, 252);
+
+    /* 예시 --color-btn-bg: rgb(220, 220, 220); */
+
+    
+}
+body {
+margin: 0;
+display: flex;
+}
+
+
+.gamescreen {
+margin: 0 auto;
+width: 1000px;
+height: 100vh;
+border: ;
+box-sizing: border-box;
+}
+.nav {
+border: ;
+height: 10%;
+font-size: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+}
+.score {
+height: 100px;
+margin-top: 40px;
+box-sizing: border-box;
+}
+.main {
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.manuel {
+width: 325px;
+height: 700px;
+border: 2px solid red;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-self: flex-end;
+
+}
+.manuel > div {
+background-color: aquamarine;
+border: 1px solid black;
+width: 105px;
+height: 105px;
+display: grid;
+grid-template-columns: repeat(3, 35px);
+grid-template-rows: repeat(3, 35px); */
+}
+/*여기부터 블럭*/
+#Imino {
+width: 140px;
+height: 105px;
+display: grid;
+border: 2px solid black;
+grid-template-rows: repeat(4, 35px);
+grid-template-columns: repeat(4, 35px);
+margin: 0 50px ;
+}
+#I5,#I6,#I7,#I8{background-color: var(--color-block-model);}
+.Omino {
+}
+#O4,#O5,#O7,#O8{background-color: var(--color-block-model);}
+.Zmino {
+}
+#Z4,#Z5,#Z8,#Z9{background-color: var(--color-block-model);}
+.Smino {
+}
+#S5,#S6,#S7,#S8{background-color: var(--color-block-model);}
+.Jmino {
+}
+#J6,#J7,#J8,#J9{background-color: var(--color-block-model);}
+.Lmino {
+}
+#L4,#L7,#L8,#L9{background-color: var(--color-block-model);}
+.Tmino {
+}
+#T5,#T7,#T8,#T9{background-color: var(--color-block-model);}
+
+/*여기까지 블럭*/
+
+.maingame {
+background-color: aquamarine;
+margin: 0;
+padding:0;
+width: 350px;
+height: 700px;
+display: grid;
+grid-template-columns: 350px;
+grid-template-rows: repeat(20,35px);
+border: 2px solid rgba(0,0,0,0.3);
+
+}
+.yblock {
+display: grid;
+grid-template-columns: repeat(10,35px);
+}
+.yblock>div{
+    border: 1px solid white;
+    gap:-1px;
+}
+
+.Imino, .IminoR{
+    background-color: var(--color-block-blue);
+}
+
+.Omino{
+    background-color: var(--color-block-yellow);
+}
+
+.Zmino, .ZminoR{
+    background-color: var(--color-block-green);
+    }
+
+
+.Smino, .SminoR{
+    background-color: var(--color-block-red);
+    }
+
+.Lmino1, .Lmino2, .Lmino3, .Lmino4 {
+    background-color: var(--color-block-orange);
+    }
+
+
+.Jmino1, .Jmino2, .Jmino3, .Jmino4 {
+    background-color: var(--color-block-purple);
+    }
+ 
+
+.Tmino1, .Tmino2, .Tmino3, .Tmino4 {
+    background-color: var(--color-block-violet);
+    }
+
+.interface {
+border: 2px solid blue;
+width: 325px;
+height: 700px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.randombox {
+width: 105px;
+height: 105px;
+margin-top: 100px;
+align-self: ;
+}
+.footer {
+height: 10%;
+box-sizing: border-box;
+}
+.startbutton{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #ccc;}
+
+.startbutton:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #ff005e;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translatey(-100%) rotatex(90deg);
+  }
+  .startbutton:hover:before
+  {
+    transform: translatey(0) rotatex(0deg);
+  }
+
+  .startbutton:after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #ea004f;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translatey(0) rotatex(0deg);
+  }
+  .startbutton:hover:after
+  {
+    transform: translatey(100%) rotatex(90deg);
+  }
+
+/* .fixed{
+    background-color: rgba(0,0,0,0.3);
+} */
+
